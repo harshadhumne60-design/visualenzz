@@ -54,70 +54,110 @@ Visualenz | Hire a Professional Videography Agency</title>
 </section>
 
 <!-- ================= CONTACT SECTION ================= -->
-<section class="max-w-7xl mx-auto px-6 pb-20">
-  <div class="grid lg:grid-cols-5 bg-white rounded-2xl shadow-xl overflow-hidden">
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <div class="grid lg:grid-cols-3 bg-white rounded-2xl shadow-xl overflow-hidden">
 
     <!-- FORM -->
-    <div class="lg:col-span-3 p-8 md:p-12">
+    <div class="lg:col-span-1 p-8 md:p-12">
       <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
 
-      <form onsubmit="submitForm(event)" class="space-y-6">
+      <form 
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="space-y-6"
+      >
+        <input type="hidden" name="form-name" value="contact">
 
         <div class="grid md:grid-cols-2 gap-6">
-          <input required placeholder="Full Name"
-                 class="border px-4 py-3 rounded-md w-full">
-          <input required placeholder="Company / Brand Name"
-                 class="border px-4 py-3 rounded-md w-full">
+          <input
+            type="text"
+            name="full_name"
+            required
+            placeholder="Full Name"
+            class="border px-4 py-3 rounded-md w-full"
+          />
+
+          <input
+            type="text"
+            name="company_name"
+            required
+            placeholder="Company / Brand Name"
+            class="border px-4 py-3 rounded-md w-full"
+          />
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-          <input type="email" required placeholder="Email Address"
-                 class="border px-4 py-3 rounded-md w-full">
-          <input placeholder="Contact Number"
-                 class="border px-4 py-3 rounded-md w-full">
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Email Address"
+            class="border px-4 py-3 rounded-md w-full"
+          />
+
+          <input
+            type="text"
+            name="phone"
+            placeholder="Contact Number"
+            class="border px-4 py-3 rounded-md w-full"
+          />
         </div>
 
-        <select class="border px-4 py-3 rounded-md w-full">
-          <option>Select a service</option>
+        <select
+          name="service"
+          required
+          class="border px-4 py-3 rounded-md w-full"
+        >
+          <option value="">Select a service</option>
           <option>Social Media Handling</option>
-          <option>Brand Promotions</option>
+          <option>Brand Promotion</option>
           <option>Commercial Photography</option>
           <option>Corporate Videography</option>
           <option>Other Inquiry</option>
         </select>
 
-        <textarea rows="4" placeholder="Tell us about your project..."
-                  class="border px-4 py-3 rounded-md w-full"></textarea>
+        <textarea
+          name="message"
+          rows="4"
+          required
+          placeholder="Tell us about your project..."
+          class="border px-4 py-3 rounded-md w-full"
+        ></textarea>
 
-        <button class="bg-slate-900 text-white px-8 py-3 rounded-md font-semibold">
+        <button
+          type="submit"
+          class="bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800 transition"
+        >
           Submit Your Message
         </button>
       </form>
     </div>
 
     <!-- INFO -->
-<div class="lg:col-span-2 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-between">
-  <div>
-    <h3 class="text-xl font-bold mb-8">Contact Information</h3>
+    <div class="lg:col-span-2 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-between">
+      <div>
+        <h3 class="text-xl font-bold mb-8">Contact Information</h3>
 
-    <p class="mb-4">
-      📧 <a href="mailto:contact@visualenz.com" class="hover:underline">
-        contact@visualenz.com
-      </a>
-    </p>
+        <p class="mb-4">
+          📧 <a href="mailto:contact@visualenz.com" class="hover:underline">
+            contact@visualenz.com
+          </a>
+        </p>
 
-    <p class="mb-4">📞 +91 9373 25 1428</p>
-    <p>📍 Nagpur • Pune • Mumbai</p>
+        <p class="mb-4">📞 +91 9373 25 1428</p>
+        <p>📍 Nagpur • Pune • Mumbai</p>
+      </div>
+
+      <div class="bg-slate-800/60 p-6 rounded-xl mt-12">
+        <p class="italic text-sm text-slate-300">
+          “Visualenz transformed how we present our industrial capabilities.”
+        </p>
+        <p class="mt-4 text-sm font-bold">Harshad Humne, Founder</p>
+      </div>
+    </div>
+
   </div>
-
-  <div class="bg-slate-800/60 p-6 rounded-xl mt-12">
-    <p class="italic text-sm text-slate-300">
-      “Visualenz transformed how we present our industrial capabilities.”
-    </p>
-    <p class="mt-4 text-sm font-bold">Harshad Humne, Founder</p>
-  </div>
-</div>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
