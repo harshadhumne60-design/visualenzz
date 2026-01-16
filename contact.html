@@ -62,76 +62,46 @@ Visualenz | Hire a Professional Videography Agency</title>
       <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
 
       <form 
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        class="space-y-6"
-      >
-        <input type="hidden" name="form-name" value="contact">
+  name="contact"
+  method="POST"
+  data-netlify="true"
+>
+  <input type="hidden" name="form-name" value="contact" />
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <input
-            type="text"
-            name="full_name"
-            required
-            placeholder="Full Name"
-            class="border px-4 py-3 rounded-md w-full"
-          />
+  <div class="grid md:grid-cols-2 gap-6">
+    <input name="fullName" required placeholder="Full Name" class="border px-4 py-3 rounded-md w-full" />
+    <input name="company" required placeholder="Company / Brand Name" class="border px-4 py-3 rounded-md w-full" />
+  </div>
 
-          <input
-            type="text"
-            name="company_name"
-            required
-            placeholder="Company / Brand Name"
-            class="border px-4 py-3 rounded-md w-full"
-          />
-        </div>
+  <div class="grid md:grid-cols-2 gap-6 mt-6">
+    <input type="email" name="email" required placeholder="Email Address" class="border px-4 py-3 rounded-md w-full" />
+    <input name="phone" placeholder="Contact Number" class="border px-4 py-3 rounded-md w-full" />
+  </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Email Address"
-            class="border px-4 py-3 rounded-md w-full"
-          />
+  <select name="service" class="border px-4 py-3 rounded-md w-full mt-6">
+    <option>Select a service</option>
+    <option>Social Media Handling</option>
+    <option>Brand Promotion</option>
+    <option>Commercial Photography</option>
+    <option>Corporate Videography</option>
+    <option>Other Inquiry</option>
+  </select>
 
-          <input
-            type="text"
-            name="phone"
-            placeholder="Contact Number"
-            class="border px-4 py-3 rounded-md w-full"
-          />
-        </div>
+  <textarea
+    name="message"
+    rows="4"
+    placeholder="Tell us about your project..."
+    class="border px-4 py-3 rounded-md w-full mt-6"
+  ></textarea>
 
-        <select
-          name="service"
-          required
-          class="border px-4 py-3 rounded-md w-full"
-        >
-          <option value="">Select a service</option>
-          <option>Social Media Handling</option>
-          <option>Brand Promotion</option>
-          <option>Commercial Photography</option>
-          <option>Corporate Videography</option>
-          <option>Other Inquiry</option>
-        </select>
+  <button
+    type="submit"
+    class="bg-slate-900 text-white px-6 py-3 rounded-md mt-6"
+  >
+    Submit Your Message
+  </button>
+</form>
 
-        <textarea
-          name="message"
-          rows="4"
-          required
-          placeholder="Tell us about your project..."
-          class="border px-4 py-3 rounded-md w-full"
-        ></textarea>
-
-        <button
-          type="submit"
-          class="bg-slate-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-slate-800 transition"
-        >
-          Submit Your Message
-        </button>
-      </form>
     </div>
 
     <!-- INFO -->
